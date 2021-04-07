@@ -4,6 +4,8 @@
   --accent-color: #e07a5f;
   --headings-color: #71168d;
   --body-color: #afa2ff;
+  --border-color: black;
+  --border-radius: 30px;
 }
 
 /* general styles */
@@ -242,6 +244,42 @@ a {
 
 @media screen and (min-width: 1024px) {
   .btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* Inputs */
+.input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  color: var(--headings-color);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+}
+
+::placeholder {
+  color: var(--primary-color);
+}
+
+.input-group {
+  border: 1px solid var(--border-color);
+  display: flex;
+  border-radius: var(--border-radius);
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+}
+
+.input-group .btn {
+  margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
     font-size: 1.5rem;
   }
 }
