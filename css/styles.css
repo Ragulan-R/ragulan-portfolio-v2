@@ -1,9 +1,9 @@
 :root {
   --primary-color: #3d405b;
   --secondary-color: #4392f1;
-  --accent-color: #e07a5f;
-  --headings-color: #71168d;
-  --body-color: #afa2ff;
+  --accent-color: black;
+  --headings-color: black;
+  --body-color: black;
   --border-color: black;
   --border-radius: 30px;
 }
@@ -24,6 +24,24 @@
 html {
   font-size: 62.5%;
   /* or 10px */
+}
+
+.codeLink {
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.pokemonTools img {
+  width: 40px;
+}
+
+.stockifyTools img {
+  width: 40px;
+}
+
+.skillBoxx img {
+  width: 50px;
 }
 
 body {
@@ -206,7 +224,7 @@ a {
 /* Buttons */
 
 .btn {
-  border-radius: 40px;
+  /* border-radius: 40px; */
   border: 0;
   cursor: pointer;
   font-size: 1.8rem;
@@ -245,8 +263,9 @@ a {
 }
 
 .btn--accent {
-  background: var(--accent-color);
-  color: white;
+  background: white;
+  color: black;
+  border: 1px solid black;
 }
 
 .btn--accent:hover {
@@ -500,6 +519,19 @@ a {
   display: grid;
 }
 
+.grid--4x2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* .grid--4x2 img {
+  width: 50px;
+} */
+
 /* standard tablet view breakpoint */
 @media screen and (min-width: 768px) {
   .grid--1x2 {
@@ -669,7 +701,7 @@ a {
 
 /* Navigation Bar */
 .nav {
-  background: #000;
+  background: white;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -688,7 +720,7 @@ a {
 }
 
 .nav__item > a {
-  color: #d2d0db;
+  color: black;
   transition: color 0.3s;
 }
 
@@ -799,7 +831,7 @@ a {
 
 /* Features */
 .feature {
-  gap: 4rem 2rem;
+  gap: 4rem 5rem;
   margin: 12rem 0;
 }
 
@@ -813,6 +845,10 @@ a {
 
 .feature__image {
   width: 100%;
+}
+
+.feature__content {
+  align-self: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -869,14 +905,16 @@ a {
   font-weight: 600;
 }
 
+footer p {
+  text-align: center;
+}
+
 .footer__brand {
   margin-top: 5rem;
   text-align: center;
 }
 
 .footer__brand img {
-  /* TODO: Consider refactoring this and applying it to 
-  all images. */
   width: 100%;
   max-width: 230px;
 }
